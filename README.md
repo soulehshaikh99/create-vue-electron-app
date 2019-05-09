@@ -35,7 +35,7 @@ yarn run electron-pack
 npm run electron-pack
 ```
 
-<h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
+<h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">Vue CLI</a>(@vue/cli)</h3>
 
 **1) Install Necessary Packages Globally**
 
