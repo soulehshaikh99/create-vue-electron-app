@@ -1,4 +1,4 @@
-# React and Electron JS App
+# Vue and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most robust blend of <a target="_blank" href="https://vuejs.org/">Vue<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
 <h3>Use this boilerplate:</h3>
