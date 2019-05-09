@@ -169,7 +169,7 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-**9) Move all dependencies to devDependencies as they are not needed in production build.
+**9) Move core-js and vue dependencies  to devDependencies as they are not needed in production build.
 Your devDependencies section should look like this**
 
 ```json
