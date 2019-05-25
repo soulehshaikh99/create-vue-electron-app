@@ -4,14 +4,14 @@
 <h3>Use this boilerplate:</h3>
 
 ```cmd
-git clone https://github.com/soulehshaikh99/create-vue-electron-app.git
-cd create-vue-electron-app
+$ git clone https://github.com/soulehshaikh99/create-vue-electron-app.git
+$ cd create-vue-electron-app
 
-yarn install
-yarn global add @vue/cli concurrently wait-on electron electron-builder
+$ yarn install
+$ yarn global add @vue/cli concurrently wait-on electron electron-builder
     or
-npm install
-npm i -g @vue/cli concurrently wait-on electron electron-builder
+$ npm install
+$ npm i -g @vue/cli concurrently wait-on electron electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
@@ -22,17 +22,17 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 **1) For running app in development mode**
 
 ```cmd
-yarn run electron-dev
+$ yarn run electron-dev
         or
-npm run electron-dev
+$ npm run electron-dev
 ```
 
 **2) For packaging app using electron-builder**
 
 ```cmd
-yarn run electron-pack
+$ yarn run electron-pack
         or
-npm run electron-pack
+$ npm run electron-pack
 ```
 
 <h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">Vue CLI</a>(@vue/cli)</h3>
@@ -40,39 +40,39 @@ npm run electron-pack
 **1) Install Necessary Packages Globally**
 
 ```cmd
-yarn global add @vue/cli concurrently wait-on electron electron-builder
+$ yarn global add @vue/cli concurrently wait-on electron electron-builder
     or
-npm i -g @vue/cli concurrently wait-on electron electron-builder
+$ npm i -g @vue/cli concurrently wait-on electron electron-builder
 ```
 
 **2) Create New Vue App**
 
 ```cmd
-vue create create-vue-electron-app
+$ vue create create-vue-electron-app
 ```
 
 **3) Change directory to that project folder**
 
 ```cmd 
-cd create-vue-electron-app
+$ cd create-vue-electron-app
 ```
 
 **4) Install electron as development dependency**
 
 ```cmd 
-yarn add --dev electron
+$ yarn add --dev electron
             or
-npm i -D electron
+$ npm i -D electron
 ```
 
 **5) Create vue.config.js file to write Vue Configuration that will be automatically loaded by @vue/cli-service**
 
 ```cmd
 // Windows Users
-notepad.exe vue.config.js
+$ notepad.exe vue.config.js
 
 // Linux and macOS Users 
-touch vue.config.js
+$ touch vue.config.js
 ```
 
 **6) Paste this code in vue.config.js file**
@@ -90,10 +90,10 @@ module.exports = {
 
 ```cmd
 // Windows Users
-notepad.exe public\electron.js
+$ notepad.exe public\electron.js
 
 // Linux and macOS Users
-touch public/electron.js
+$ touch public/electron.js
 ```
 
 **8) Paste this code in electron.js file**
