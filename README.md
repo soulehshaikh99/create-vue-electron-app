@@ -1,3 +1,4 @@
+
 # Vue and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most robust blend of <a target="_blank" href="https://vuejs.org/">Vue<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
@@ -8,10 +9,10 @@ $ git clone https://github.com/soulehshaikh99/create-vue-electron-app.git
 $ cd create-vue-electron-app
 
 $ yarn install
-$ yarn global add @vue/cli concurrently wait-on electron electron-builder
+$ yarn global add @vue/cli concurrently wait-on electron-builder
     or
 $ npm install
-$ npm i -g @vue/cli concurrently wait-on electron electron-builder
+$ npm i -g @vue/cli concurrently wait-on electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
@@ -40,9 +41,9 @@ $ npm run electron-pack
 **1) Install Necessary Packages Globally**
 
 ```cmd
-$ yarn global add @vue/cli concurrently wait-on electron electron-builder
+$ yarn global add @vue/cli concurrently wait-on electron-builder
     or
-$ npm i -g @vue/cli concurrently wait-on electron electron-builder
+$ npm i -g @vue/cli concurrently wait-on electron-builder
 ```
 
 **2) Create New Vue App**
@@ -174,16 +175,16 @@ Your devDependencies section should look like this**
 
 ```json
 "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "babel-eslint": "^10.0.1",
-    "core-js": "^2.6.5",
-    "electron": "^5.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.5.21"
+  "@vue/cli-plugin-babel": "^3.11.0",
+  "@vue/cli-plugin-eslint": "^3.11.0",
+  "@vue/cli-service": "^3.11.0",
+  "babel-eslint": "^10.0.1",
+  "core-js": "^2.6.5",
+  "electron": "^6.0.9",
+  "eslint": "^5.16.0",
+  "eslint-plugin-vue": "^5.0.0",
+  "vue": "^2.6.10",
+  "vue-template-compiler": "^2.6.10"
 }
 ```
 
@@ -196,7 +197,7 @@ Your devDependencies section should look like this**
     "lint": "vue-cli-service lint",
     "electron-dev": "concurrently \"yarn run serve\" \"wait-on http://localhost:8080 && electron .\"",
     "preelectron-pack": "yarn build",
-    "electron-pack": "build"
+    "electron-pack": "electron-builder"
 }
 ```
 
@@ -214,6 +215,30 @@ Your devDependencies section should look like this**
       "main": "build/electron.js"
     }
 }
+```
+
+**12) Project Dependencies Version Info**
+
+**Local Dependencies**
+```json
+"@vue/cli-plugin-babel": "^3.11.0",
+"@vue/cli-plugin-eslint": "^3.11.0",
+"@vue/cli-service": "^3.11.0",
+"babel-eslint": "^10.0.1",
+"core-js": "^2.6.5",
+"electron": "^6.0.9",
+"eslint": "^5.16.0",
+"eslint-plugin-vue": "^5.0.0",
+"vue": "^2.6.10",
+"vue-template-compiler": "^2.6.10"
+```
+
+**Global Dependencies**
+```json
+"@vue/cli": "^3.11.0",
+"concurrently": "^4.1.2",
+"electron-builder": "^21.2.0",
+"wait-on": "^3.3.0"
 ```
 
 **Result**
