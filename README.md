@@ -73,13 +73,19 @@ $ yarn global add @vue/cli
 # npm i -g @vue/cli
 ```
 
-#### 2) Switch to project directory
+#### 2) Create a vue project using @vue/cli
+
+```bash
+$ vue create create-vue-electron-app
+```
+
+#### 3) Switch to project directory
 
 ```bash
 $ cd create-vue-electron-app
 ```
 
-#### 3) Move all dependencies to devDependencies using IDE / Text Editor
+#### 4) Move all dependencies to devDependencies using IDE / Text Editor
 
 ```bash
 # It should look something like this
@@ -97,20 +103,20 @@ $ cd create-vue-electron-app
 }
 ```
 
-#### 4) Install Development Dependencies
+#### 5) Install Development Dependencies
 
 ```bash
 $ yarn add --dev electron electron-builder wait-on concurrently
 # npm i -D electron electron-builder wait-on concurrently
 ```
 
-#### 5) Install Production Dependency
+#### 6) Install Production Dependency
 
 ```bash
 $ yarn add electron-serve # or npm i electron-serve
 ```
 
-#### 6) Your dependencies should look something like this
+#### 7) Your dependencies should look something like this
 
 ```json
 "dependencies": {
@@ -133,11 +139,11 @@ $ yarn add electron-serve # or npm i electron-serve
 }
 ```
 
-#### 7) Download the app icon
+#### 8) Download the app icon
 
 [favicon.png](https://raw.githubusercontent.com/soulehshaikh99/assets/master/framework-icons/vue/favicon.png) and place it in the public directory.
 
-#### 8) Create vue.config.js file (serves as configuration file for @vue/cli-service)
+#### 9) Create vue.config.js file (serves as configuration file for @vue/cli-service)
 
 ```bash
 # Windows Users
@@ -148,7 +154,7 @@ $ fsutil file createnew vue.config.js 0
 $ touch vue.config.js
 ```
 
-#### 9) Paste the below code in vue.config.js file
+#### 10) Paste the below code in vue.config.js file
 
 ```js
 const path = require("path");
@@ -159,7 +165,7 @@ module.exports = {
 };
 ```
 
-#### 10) Create main.js file (serves as entry point for Electron App's Main Process)
+#### 11) Create main.js file (serves as entry point for Electron App's Main Process)
 
 ```bash
 # Windows Users
@@ -170,7 +176,7 @@ $ fsutil file createnew main.js 0
 $ touch main.js
 ```
 
-#### 11) Paste the below code in main.js file
+#### 12) Paste the below code in main.js file
 
 ```js
 // Modules to control application life and create native browser window
@@ -255,7 +261,7 @@ app.on("activate", function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-#### 12) Update the script section of `package.json`
+#### 13) Update the script section of `package.json`
 
 ```bash
 # Add this scripts
@@ -276,7 +282,7 @@ app.on("activate", function () {
 }
 ```
 
-#### 13) Add the following configuration in `package.json`
+#### 14) Add the following configuration in `package.json`
 
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 
@@ -295,7 +301,7 @@ app.on("activate", function () {
 }
 ```
 
-#### 14) Test drive your app
+#### 15) Test drive your app
 
 ```bash
 # Run your app
@@ -308,7 +314,7 @@ $ yarn electron-pack # or npm run electron-pack
 ### 💯 Result
 
 <div align="center">
-<img alt="Electron Next Window Screeenshot" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/png/create-vue-electron-app.png" />
+<img alt="Electron Vue Window Screeenshot" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/png/create-vue-electron-app.png" />
 </div>
 
 <h3>😍 Made with ❤️ from Souleh</h3>
@@ -317,4 +323,4 @@ $ yarn electron-pack # or npm run electron-pack
 <br/>
 
 <h3>📋 License: </h3>
-Licensed under the <a href="https://github.com/soulehshaikh99/create-next-electron-app/blob/master/LICENSE">MIT License</a>.
+Licensed under the <a href="https://github.com/soulehshaikh99/create-vue-electron-app/blob/master/LICENSE">MIT License</a>.
