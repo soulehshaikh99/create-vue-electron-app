@@ -117,12 +117,18 @@ $ yarn add electron-serve # or npm i electron-serve
   "electron-serve": "^1.0.0"
 },
 "devDependencies": {
+  "@vue/cli-plugin-babel": "~4.5.0",
+  "@vue/cli-plugin-eslint": "~4.5.0",
+  "@vue/cli-service": "~4.5.0",
+  "@vue/compiler-sfc": "^3.0.0-0",
+  "babel-eslint": "^10.1.0",
+  "core-js": "^3.6.5",
   "concurrently": "^5.3.0",
-  "electron": "^10.0.0",
+  "electron": "^10.1.0",
   "electron-builder": "^22.8.0",
-  "next": "9.5.2",
-  "react": "16.13.1",
-  "react-dom": "16.13.1",
+  "eslint": "^6.7.2",
+  "eslint-plugin-vue": "^7.0.0-0",
+  "vue": "^3.0.0-0",
   "wait-on": "^5.2.0"
 }
 ```
@@ -164,7 +170,7 @@ $ fsutil file createnew main.js 0
 $ touch main.js
 ```
 
-#### 10) Paste the below code in main.js file
+#### 11) Paste the below code in main.js file
 
 ```js
 // Modules to control application life and create native browser window
@@ -249,7 +255,7 @@ app.on("activate", function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-#### 11) Update the script section of `package.json`
+#### 12) Update the script section of `package.json`
 
 ```bash
 # Add this scripts
@@ -270,7 +276,7 @@ app.on("activate", function () {
 }
 ```
 
-#### 12) Add the following configuration in `package.json`
+#### 13) Add the following configuration in `package.json`
 
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 
@@ -278,7 +284,7 @@ app.on("activate", function () {
 "main": "main.js",  # Application Entry Point, please verify entry point is set to main.js
 "build": {
   "icon": "public/favicon.png",
-  "productName": "Next and Electron App",
+  "productName": "Vue and Electron App",
   "files": [
     "build/**/*",
     "main.js"
@@ -302,7 +308,7 @@ $ yarn electron-pack # or npm run electron-pack
 ### 💯 Result
 
 <div align="center">
-<img alt="Electron Next Window Screeenshot" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/png/create-next-electron-app.png" />
+<img alt="Electron Next Window Screeenshot" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/png/create-vue-electron-app.png" />
 </div>
 
 <h3>😍 Made with ❤️ from Souleh</h3>
