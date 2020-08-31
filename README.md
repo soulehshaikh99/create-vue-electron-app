@@ -1,251 +1,314 @@
+<div align="center">
+<img alt="Electron Vue Crossover Banner" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/svg/Electron_Vue.svg" width="580" />
+</div>
+<br />
+The boilerplate code to get started creating Cross-platform Desktop Apps with Electron and Vue.js as front-end technology.
+<br />
+<br />
+<div align="center">
 
-# Vue and Electron JS App
-> :rocket: :telescope: An easiest way to get started with the most robust blend of <a target="_blank" href="https://vuejs.org/">Vue<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
+[![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://forthebadge.com)&nbsp;&nbsp;&nbsp;&nbsp;[![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)<br />
 
-<h3>Use this boilerplate:</h3>
+[![forthebadge](http://forthebadge.com/images/badges/uses-html.svg)](http://forthebadge.com)&nbsp;&nbsp;&nbsp;[![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)&nbsp;&nbsp;&nbsp;[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 
-```cmd
-$ git clone https://github.com/soulehshaikh99/create-vue-electron-app.git
-$ cd create-vue-electron-app
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-$ yarn install
-$ yarn global add @vue/cli concurrently wait-on electron-builder
-    or
-$ npm install
-$ npm i -g @vue/cli concurrently wait-on electron-builder
-```
+</div>
 
-**Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
+## ✒️ Overview
+
+The aim of this project is to provide Web Developers using `next.js` the power to create cross-platform desktop apps using `electron`.
+
+#### 🧐 What packages does the project use?
+
+**`electron`** enables you to create desktop applications with pure JavaScript by providing a runtime with rich native (operating system) APIs. You could see it as a variant of the Node.js runtime that is focused on desktop applications instead of web servers.
+
+**`electron-builder`** is used as a complete solution to package and build a ready for distribution (supports Numerous target formats) Electron app with "auto update" support out of the box.
+
+**`electron-serve`** is used for Static file serving for Electron apps.
+
+**`vue.js`** is a progressive framework for building user interfaces. It is designed from the ground up to be incrementally adoptable, and can easily scale between a library and a framework depending on different use cases. It consists of an approachable core library that focuses on the view layer only, and an ecosystem of supporting libraries that helps you tackle complexity in large Single-Page Applications.
+
+**`concurrently`** is used to run multiple commands concurrently.
+
+**`wait-on`** is used as it can wait for sockets, and http(s) resources to become available.
+<br />
+
+## 🚀 Getting Started
+
+**Note:** If you wish to use npm over yarn then modify `package.json` by replacing `yarn` with `npm` in `electron-dev` and `preelectron-pack` scripts.
 But I strongly recommend using <em>yarn</em> as it is a better choice when compared to <em>npm</em>.
 
-<h3>Scripts Instructions:</h3>
+### 🤓 Use this boilerplate
 
-**1) For running app in development mode**
+```bash
+# Clone the Project
 
-```cmd
-$ yarn run electron-dev
-        or
-$ npm run electron-dev
+# Use degit scaffolding tool
+$ npx degit soulehshaikh99/create-vue-electron-app create-vue-electron-app
+# or GitHub CLI Users
+$ gh repo clone https://github.com/soulehshaikh99/create-vue-electron-app.git
+# or Normal Git Users
+$ git clone https://github.com/soulehshaikh99/create-vue-electron-app.git
+
+# Switch location to the cloned directory
+$ cd create-vue-electron-app
+
+# Install dependencies
+$ yarn # or npm install
+
+# Run your app
+$ yarn electron-dev # or npm run electron-dev
+
+# Package Your App
+$ yarn electron-pack # or npm run electron-pack
 ```
 
-**2) For packaging app using electron-builder**
+### 💫 Create this boilerplate from scratch (Manual Setup)
 
-```cmd
-$ yarn run electron-pack
-        or
-$ npm run electron-pack
+#### 1) Start by installing @vue/cli globally
+
+```bash
+$ yarn global add @vue/cli
+# npm i -g @vue/cli
 ```
 
-<h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">Vue CLI</a>(@vue/cli)</h3>
+#### 2) Switch to project directory
 
-**1) Install Necessary Packages Globally**
-
-```cmd
-$ yarn global add @vue/cli concurrently wait-on electron-builder
-    or
-$ npm i -g @vue/cli concurrently wait-on electron-builder
-```
-
-**2) Create New Vue App**
-
-```cmd
-$ vue create create-vue-electron-app
-```
-
-**3) Change directory to that project folder**
-
-```cmd 
+```bash
 $ cd create-vue-electron-app
 ```
 
-**4) Install electron as development dependency**
+#### 3) Move all dependencies to devDependencies using IDE / Text Editor
 
-```cmd 
-$ yarn add --dev electron
-            or
-$ npm i -D electron
+```bash
+# It should look something like this
+"dependencies": {},
+"devDependencies": {
+  "@vue/cli-plugin-babel": "~4.5.0",
+  "@vue/cli-plugin-eslint": "~4.5.0",
+  "@vue/cli-service": "~4.5.0",
+  "@vue/compiler-sfc": "^3.0.0-0",
+  "babel-eslint": "^10.1.0",
+  "core-js": "^3.6.5",
+  "eslint": "^6.7.2",
+  "eslint-plugin-vue": "^7.0.0-0",
+  "vue": "^3.0.0-0"
+}
 ```
 
-**5) Create vue.config.js file to write Vue Configuration that will be automatically loaded by @vue/cli-service**
+#### 4) Install Development Dependencies
 
-```cmd
-// Windows Users
-$ notepad.exe vue.config.js
+```bash
+$ yarn add --dev electron electron-builder wait-on concurrently
+# npm i -D electron electron-builder wait-on concurrently
+```
 
-// Linux and macOS Users 
+#### 5) Install Production Dependency
+
+```bash
+$ yarn add electron-serve # or npm i electron-serve
+```
+
+#### 6) Your dependencies should look something like this
+
+```json
+"dependencies": {
+  "electron-serve": "^1.0.0"
+},
+"devDependencies": {
+  "concurrently": "^5.3.0",
+  "electron": "^10.0.0",
+  "electron-builder": "^22.8.0",
+  "next": "9.5.2",
+  "react": "16.13.1",
+  "react-dom": "16.13.1",
+  "wait-on": "^5.2.0"
+}
+```
+
+#### 7) Download the app icon
+
+[favicon.png](https://raw.githubusercontent.com/soulehshaikh99/assets/master/framework-icons/vue/favicon.png) and place it in the public directory.
+
+#### 8) Create vue.config.js file (serves as configuration file for @vue/cli-service)
+
+```bash
+# Windows Users
+$ fsutil file createnew vue.config.js 0
+# notepad vue.config.js
+
+# Linux and macOS Users
 $ touch vue.config.js
 ```
 
-**6) Paste this code in vue.config.js file**
+#### 9) Paste the below code in vue.config.js file
 
-```javascript
+```js
 const path = require("path");
 
 module.exports = {
-    outputDir: path.resolve(__dirname, "build"),
-    publicPath: "./"
+    // Changes vue.js build directory
+    outputDir: path.resolve(__dirname, "build")
 };
 ```
 
-**7) Create electron.js file in public directory**
+#### 10) Create main.js file (serves as entry point for Electron App's Main Process)
 
-```cmd
-// Windows Users
-$ notepad.exe public\electron.js
+```bash
+# Windows Users
+$ fsutil file createnew main.js 0
+# notepad main.js
 
-// Linux and macOS Users
-$ touch public/electron.js
+# Linux and macOS Users
+$ touch main.js
 ```
 
-**8) Paste this code in electron.js file**
+#### 10) Paste the below code in main.js file
 
-```javascript
+```js
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
-const path = require('path');
+const { app, BrowserWindow } = require("electron");
+const path = require("path");
+const serve = require("electron-serve");
+const loadURL = serve({ directory: "build" });
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function createWindow () {
-    // Create the browser window.
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 750,
-        webPreferences: {
-            nodeIntegration: true
-        },
-        icon: `${path.join(__dirname, 'favicon.ico')}`,
-        show: false
-    });
+function isDev() {
+  return !app.isPackaged;
+}
 
-    // This block of code is intended for development purpose only.
-    // Delete this entire block of code when you are ready to package the application.
-    if(!app.isPackaged) {
-        mainWindow.loadURL('http://localhost:8080/');
-    } else {
-        //Do not delete this statement, Use this piece of code when packaging app for production environment
-        mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
-    }
+function createWindow() {
+  // Create the browser window.
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+    // Use this in development mode.
+    icon: isDev()
+      ? path.join(process.cwd(), "public/favicon.png")
+      : path.join(__dirname, "build/favicon.png"),
+    // Use this in production mode.
+    // icon: path.join(__dirname, 'build/favicon.png'),
+    show: false,
+  });
 
-    // Open the DevTools and also disable Electron Security Warning.
-    // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
-    // mainWindow.webContents.openDevTools();
+  // This block of code is intended for development purpose only.
+  // Delete this entire block of code when you are ready to package the application.
+  if (isDev()) {
+    mainWindow.loadURL("http://localhost:8080/");
+  } else {
+    loadURL(mainWindow);
+  }
 
-    // Emitted when the window is closed.
-    mainWindow.on('closed', function () {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
-        mainWindow = null
-    });
+  // Uncomment the following line of code when app is ready to be packaged.
+  // loadURL(mainWindow);
 
-    // Emitted when the window is ready to be shown
-    // This helps in showing the window gracefully.
-    mainWindow.once('ready-to-show', () => {
-        mainWindow.show()
-    });
+  // Open the DevTools and also disable Electron Security Warning.
+  // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
+  // mainWindow.webContents.openDevTools();
+
+  // Emitted when the window is closed.
+  mainWindow.on("closed", function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    mainWindow = null;
+  });
+
+  // Emitted when the window is ready to be shown
+  // This helps in showing the window gracefully.
+  mainWindow.once("ready-to-show", () => {
+    mainWindow.show();
+  });
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+app.on("ready", createWindow);
 
 // Quit when all windows are closed.
-app.on('window-all-closed', function () {
-    // On macOS it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') app.quit()
+app.on("window-all-closed", function () {
+  // On macOS it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform !== "darwin") app.quit();
 });
 
-app.on('activate', function () {
-    // On macOS it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
-    if (mainWindow === null) createWindow()
+app.on("activate", function () {
+  // On macOS it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (mainWindow === null) createWindow();
 });
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 ```
 
-**9) Move core-js and vue dependencies  to devDependencies as they are not needed in production build.
-Your devDependencies section should look like this**
+#### 11) Update the script section of `package.json`
 
-```json
-"devDependencies": {
-  "@vue/cli-plugin-babel": "^3.11.0",
-  "@vue/cli-plugin-eslint": "^3.11.0",
-  "@vue/cli-service": "^3.11.0",
-  "babel-eslint": "^10.0.1",
-  "core-js": "^2.6.5",
-  "electron": "^6.0.9",
-  "eslint": "^5.16.0",
-  "eslint-plugin-vue": "^5.0.0",
-  "vue": "^2.6.10",
-  "vue-template-compiler": "^2.6.10"
-}
-```
+```bash
+# Add this scripts
+"electron": "wait-on http://localhost:8080 && electron .",
+"electron-dev": "concurrently \"yarn run serve\" \"yarn run electron\"",
+"preelectron-pack": "yarn run build",
+"electron-pack": "electron-builder"
 
-**10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
-
-```json
+# You should end up with something similar
 "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "electron-dev": "concurrently \"yarn run serve\" \"wait-on http://localhost:8080 && electron .\"",
-    "preelectron-pack": "yarn build",
-    "electron-pack": "electron-builder"
+  "serve": "vue-cli-service serve",
+  "build": "vue-cli-service build",
+  "lint": "vue-cli-service lint",
+  "electron": "wait-on http://localhost:8080 && electron .",
+  "electron-dev": "concurrently \"yarn run serve\" \"yarn run electron\"",
+  "preelectron-pack": "yarn run build",
+  "electron-pack": "electron-builder"
 }
 ```
 
-**11) Add the following configuration in package.json**
+#### 12) Add the following configuration in `package.json`
 
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
-```json
-"main": "public/electron.js",
+
+```bash
+"main": "main.js",  # Application Entry Point, please verify entry point is set to main.js
 "build": {
-    "productName": "Vue and Electron App",
-    "files": [
-      "build/**/*"
-    ],
-    "extraMetadata": {
-      "main": "build/electron.js"
-    }
+  "icon": "public/favicon.png",
+  "productName": "Next and Electron App",
+  "files": [
+    "build/**/*",
+    "main.js"
+  ],
+  "win": {},  # Windows Specific Configuration
+  "linux": {},  # Linux Specific Configuration
+  "mac": {}  # MacOs Specific Configuration
 }
 ```
 
-**12) Project Dependencies Version Info**
+#### 14) Test drive your app
 
-**Local Dependencies**
-```json
-"@vue/cli-plugin-babel": "^3.11.0",
-"@vue/cli-plugin-eslint": "^3.11.0",
-"@vue/cli-service": "^3.11.0",
-"babel-eslint": "^10.0.1",
-"core-js": "^2.6.5",
-"electron": "^6.0.9",
-"eslint": "^5.16.0",
-"eslint-plugin-vue": "^5.0.0",
-"vue": "^2.6.10",
-"vue-template-compiler": "^2.6.10"
+```bash
+# Run your app
+$ yarn electron-dev # or npm run electron-dev
+
+# Package Your App
+$ yarn electron-pack # or npm run electron-pack
 ```
 
-**Global Dependencies**
-```json
-"@vue/cli": "^3.11.0",
-"concurrently": "^4.1.2",
-"electron-builder": "^21.2.0",
-"wait-on": "^3.3.0"
-```
+### 💯 Result
 
-**Result**
+<div align="center">
+<img alt="Electron Next Window Screeenshot" src="https://raw.githubusercontent.com/soulehshaikh99/assets/master/create-electron-framework-app/readme/png/create-next-electron-app.png" />
+</div>
 
-![Result](https://user-images.githubusercontent.com/39525716/57450259-a23d9700-727b-11e9-8f65-27fff78583e8.PNG)
+<h3>😍 Made with ❤️ from Souleh</h3>
 
-<h3>Made with :heart: from Souleh</h3>
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+<br/>
 
-<h3>:clipboard: License: </h3>
-Licensed under the <a href="https://github.com/soulehshaikh99/create-vue-electron-app/blob/master/LICENSE">MIT License</a>.
+<h3>📋 License: </h3>
+Licensed under the <a href="https://github.com/soulehshaikh99/create-next-electron-app/blob/master/LICENSE">MIT License</a>.
